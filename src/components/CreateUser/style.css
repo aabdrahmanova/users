@@ -1,0 +1,56 @@
+.modal {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 99999;
+    transition: opacity 400ms ease-in;
+} 
+
+.modal > div {
+    width: 500px;
+    position: relative;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.3);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    font: 18px "Open Sans SemiBold"
+}  
+input {
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin: 10px 0;
+}
+label {
+    font: 18px "Open Sans SemiBold";
+}
+h2 {
+    margin-bottom: 40px;
+}
+.btns {
+    display: flex;
+    justify-content: space-around;
+}
+.btn {
+    padding: 0 80px;
+    margin-right: 20px;
+}
+.sbmt {
+    text-transform: uppercase;
+    font: 12px 'Open Sans SemiBold';
+    padding: 0 80px;
+    color: #000;
+    cursor: pointer;
+    opacity: .7;
+}
+    
