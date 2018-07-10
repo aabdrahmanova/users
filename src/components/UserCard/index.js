@@ -1,7 +1,27 @@
 import React, {Component} from 'react'
 import './style.css'
+import {EditUser} from '../EditUser';
 
 class UserCard extends Component {
+    constructor() {
+		super()
+
+		this.state = {
+			modal: false
+		}
+        this.renderModal = this.renderModal.bind(this);
+		this.modalToggle = this.modalToggle.bind(this);
+    }
+    
+    modalToggle() {
+		this.setState({
+			modal: !this.state.modal
+        });
+	}
+
+	renderModal() {
+		return this.state.modal ? <EditUser closeModal={this.modalToggle} /> : '';
+	}
     render() {
         const {user} = this.props
         return (
@@ -15,7 +35,8 @@ class UserCard extends Component {
                         <p>
                             Дата регистрации: {(new Date(user.date)).toDateString()}
                         </p>
-                        <button>Редактировать</button>
+                        <button onClick={this.modalToggle}>Редактировать</button>
+                        {this.renderModal()}
                         <button>Удалить</button>
                     </div>
                 </div>

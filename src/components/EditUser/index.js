@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import './style.css'
 
-export class CreateUser extends Component {
+export class EditUser extends Component {
     render() {
         return (
             <div className="modal">
                 <div>
-                   <form action="/create" method="post">
-                      <h2>Создание пользователя</h2>
+                   <form action="/edit" method="post">
+                      <h2>Редактирование пользователя</h2>
                         <label>Email</label>
                         <input type="email"/>
                         <label>Имя</label>
